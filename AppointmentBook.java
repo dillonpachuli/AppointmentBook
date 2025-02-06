@@ -21,7 +21,7 @@ public class AppointmentBook {
      * 1 <= duration <= 60
      */
     private void reserveBlock(int period, int startMinute, int duration) {
-        for(int i = startMinute; i < duration; i++){
+        for(int i = startMinute; i < startMinute + duration; i++){
             schedule[period-1][i] = false;
         }
     }

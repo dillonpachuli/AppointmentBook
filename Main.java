@@ -7,8 +7,8 @@ public class Main
         for (int i = 10; i < 15; i++) schedule[1][i] = true;
         for (int i = 30; i < 45; i++) schedule[1][i] = true;
         for (int i = 50; i < 60; i++) schedule[1][i] = true;
-        a.printPeriod(2);
-        System.out.println(a.findFreeBlock(2, 15));
+        //a.printPeriod(2);
+        //System.out.println(a.findFreeBlock(2, 15));
 
         schedule = new boolean[8][60];
         for (int i = 25; i < 30; i++) schedule[1][i] = true;
@@ -24,9 +24,19 @@ public class Main
             System.out.println("");
             period++;
         }
-        b.printPeriod(4);
+        
         System.out.println(b.makeAppointment(2, 4, 22));
-        b.printPeriod(4);
+        System.out.println(b.makeAppointment(3, 4, 3));
+        System.out.println(b.makeAppointment(2, 4, 30));
+        System.out.println("");
+
+        period = 2;
+        while(period < 5){
+            System.out.println("Period: " + period);
+            b.printPeriod(period);
+            System.out.println("");
+            period++;
+        }
     }
 }
 
